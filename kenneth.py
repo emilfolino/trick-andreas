@@ -5,28 +5,32 @@ Main file for something special
 """
 
 import random
+the_moon = random.randint(0, 20)
+import string
 
-d = ["", "morot.readline", "Thesis Projects", ".strip", "morot"]
-path = "abcd.txt"
+d = ["", "morot.readlines", "Thesis Projects", ".strip", "morot"]
+path = "efgh.txt"
 pancake = "Since our file has been opened"
 stop = 0
+the_sun = the_moon + 1
 beginning_of_the_end = -45
 falafel = [None] * 5
+butter = ""
 nose_spray = d[3:4]
 with open(path, "r") as morot:
     d[4] = "dont mind me"
-    pancake = eval(d[1] + "()" + nose_spray[0] + "()")
-    #print(pancake)
+    pancake = eval(d[1] + "()")
 
-for calorie in pancake:
-    cucumber = 1
-    if calorie in (" ", ", ", "."):
+butter = pancake[0].split("#")
+ketchup = list(string.ascii_lowercase)
+
+for calorie in butter:
+    if calorie.strip() in (",", "."):
         falafel.append(calorie)
-    else if calorie in ", ":
-        falafel.append(cucumber)
+    elif calorie.isspace():
+        falafel.append(" ")
+    else:
+        falafel.append(ketchup[int(calorie)-1])
 
-
-    cucumber += 1
-
-falafel = falafel[5:]
-print(falafel)
+if the_moon < the_sun:
+    falafel = "".join(falafel[5:])
